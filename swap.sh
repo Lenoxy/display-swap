@@ -8,6 +8,7 @@ then
     # swap to TV
     xrandr --output DP-0 --off \
         --output HDMI-1 --mode 3840x2160 --pos 0x0 --rotate normal --rate 60 --primary
+    gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
     pacmd set-default-sink $SPEAKER_TV
     pacmd set-sink-volume $SPEAKER_TV 0x10000 # 100% volume
     rm desk
