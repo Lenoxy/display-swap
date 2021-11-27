@@ -17,6 +17,7 @@ else
     xrandr --output HDMI-1 --off \
 	--output DP-0 --mode 3840x1080 --pos 0x0 --rotate normal --rate 144 --primary
     pacmd set-default-sink $SPEAKER_DESK
+    gsettings set org.gnome.desktop.interface text-scaling-factor 1
     pacmd set-sink-volume $SPEAKER_DESK 0x4000 # 40% volume
     touch desk
 fi
